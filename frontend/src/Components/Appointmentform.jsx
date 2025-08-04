@@ -82,7 +82,7 @@ const Appointmentform = () => {
     useEffect(() => {
     const fetchDoctors = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/doctors",
+        "https://hospital-managment-backend-knzo.onrender.com/user/doctors",
         {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
@@ -122,7 +122,7 @@ const Appointmentform = () => {
       const hasVisitedBool = Boolean(formData.hasVisited);
       setformData({ ...formData, hasVisited: hasVisitedBool });
 
-       const {data} = await axios.post("http://localhost:4000/api/v1/appointment/post",formData,{withCredentials:true,headers:{"Content-Type":"application/json"}});
+       const {data} = await axios.post("https://hospital-managment-backend-knzo.onrender.com/appointment/post",formData,{withCredentials:true,headers:{"Content-Type":"application/json"}});
 
        console.log(data);
        toast.success(data.message);

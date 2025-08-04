@@ -40,7 +40,7 @@ const AddNewAdmin = () => {
   const handlesubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/user/admin/addnew",formData,{withCredentials: true, headers: { "Content-Type": "application/json" }
+      const response = await axios.post("https://hospital-managment-backend-knzo.onrender.com/user/admin/addnew",formData,{withCredentials: true, headers: { "Content-Type": "application/json" }
 });
 
       toast.success(response.data.message);

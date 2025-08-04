@@ -11,7 +11,7 @@ const Messages = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       const response = await axios
-        .get("http://localhost:4000/api/v1/message/getall", {
+        .get("https://hospital-managment-backend-knzo.onrender.com/message/getall", {
           withCredentials: true,
         })
         .then((res) => {

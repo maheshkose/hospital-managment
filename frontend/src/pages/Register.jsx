@@ -49,7 +49,7 @@ const Register = () => {
     //optional//
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/patient/register",
+        "https://hospital-managment-backend-knzo.onrender.com/user/patient/register",
         formData,
         {
           withCredentials: true,

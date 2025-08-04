@@ -18,7 +18,7 @@ const App = () => {
  useEffect(() => {
   const fetchUser = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/v1/user/admin/me",{withCredentials:true, headers:{"Content-Type":"application/json"}});
+      const response = await axios.get("https://hospital-managment-backend-knzo.onrender.com/user/admin/me",{withCredentials:true, headers:{"Content-Type":"application/json"}});
       setisAuthenticated(true);
       setuser(response.data.user);
       // toast.success(response.data.message);

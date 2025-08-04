@@ -99,7 +99,7 @@ const AddNewDoctor = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/doctor/addnew",
+        "https://hospital-managment-backend-knzo.onrender.com/user/doctor/addnew",
         payload,
         { withCredentials: true }
       );

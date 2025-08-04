@@ -22,7 +22,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:4000/api/v1/user/admin/logout", {
+      .get("https://hospital-managment-backend-knzo.onrender.com/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {
