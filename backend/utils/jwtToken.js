@@ -1,6 +1,6 @@
 export const genrateToken = (user, message, statusCode, res) => {
   const token = user.generatejsonwebtoken();
-  const cookieName = user.role === "Admin" ? "adminToken" : "clientToken";
+  const cookieName = user.role === "Admin" ? "adminToken" : "patientToken";
 
   res.status(statusCode).cookie(cookieName, token, {
     expires: new Date(
