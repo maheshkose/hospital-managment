@@ -47,7 +47,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${url}/user/patient/login`,
+        `${url}/user/login`,
         { email, password, role:"Patient" },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       )
