@@ -12,7 +12,7 @@ const Doctors = () => {
    
     const fetchDoctors = async (params) => {
       try {
-        const {data} = await axios.get("https://hospital-managment-backend-knzo.onrender.com/user/doctors",{withCredentials:true});
+        const {data} = await axios.get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/doctors",{withCredentials:true});
         console.log("data",data);
         
       setdoctors(data.doctors);

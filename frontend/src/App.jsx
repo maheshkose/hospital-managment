@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
    const fetchUser = async () => {
     try {
-      const response = await axios.get("https://hospital-managment-backend-knzo.onrender.com/user/patient/me",{withCredentials:true});
+      const response = await axios.get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/patient/me",{withCredentials:true});
       setisAuthenticated(true);
       setuser(response?.data?.user);
       

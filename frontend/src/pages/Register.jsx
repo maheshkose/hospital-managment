@@ -49,7 +49,7 @@ const Register = () => {
     //optional//
     try {
       const response = await axios.post(
-        "https://hospital-managment-backend-knzo.onrender.com/user/patient/register",
+        "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/patient/register",
         formData,
         {
           withCredentials: true,

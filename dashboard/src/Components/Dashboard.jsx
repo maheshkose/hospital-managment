@@ -14,7 +14,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "https://hospital-managment-backend-knzo.onrender.com/appointment/getallappointment",
+          "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/appointment/getallappointment",
           { withCredentials: true }
         );
         console.log(data);
@@ -30,7 +30,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `https://hospital-managment-backend-knzo.onrender.com/appointment/update/${appointmentId}`,
+        `response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );

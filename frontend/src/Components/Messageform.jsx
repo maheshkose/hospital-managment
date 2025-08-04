@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const Messageform = () => {
-  const url = "https://hospital-managment-backend-knzo.onrender.com";
+  const url = "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1";
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [email, setemail] = useState("");
@@ -28,7 +28,7 @@ const Messageform = () => {
     );
     console.log(apiRes);
     
-    toast.success(apiRes.data.message);
+    toast.success(apiRes?.data?.message);
     setfirstName("");
     setemail("");
     setlastName("");

@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       
-      const apiRes = await axios.get("https://hospital-managment-backend-knzo.onrender.com/user/patient/logout",{withCredentials:true});
+      const apiRes = await axios.get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/patient/logout",{withCredentials:true});
       console.log(apiRes);
       
       toast.success(apiRes.data.message);
