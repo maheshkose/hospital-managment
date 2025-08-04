@@ -104,7 +104,7 @@ const AddNewDoctor = () => {
         { withCredentials: true }
       );
 
-      toast.success(response.data.message);
+      toast.success(response?.data?.message);
       // setisAuthenticated(true);
       // navigate('/');
     } catch (error) {

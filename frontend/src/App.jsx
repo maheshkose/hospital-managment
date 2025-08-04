@@ -22,7 +22,7 @@ const App = () => {
     try {
       const response = await axios.get("https://hospital-managment-backend-knzo.onrender.com/user/patient/me",{withCredentials:true});
       setisAuthenticated(true);
-      setuser(response.data.user);
+      setuser(response?.data?.user);
       
     } catch (error) {
       console.log("error");

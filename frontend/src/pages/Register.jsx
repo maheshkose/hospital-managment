@@ -56,8 +56,8 @@ const Register = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      toast.success(response.data.message);
-      setmessage(response.data.message)
+      toast.success(response?.data?.message);
+      setmessage(response?.data?.message)
       setformData({
         firstName: "",
         lastName: "",

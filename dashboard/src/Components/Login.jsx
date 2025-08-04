@@ -28,7 +28,7 @@ const Login = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      toast.success(response.data.message);
+      toast.success(response?.data?.message);
       setisAuthenticated(true);
     } catch (error) {
       toast.error(error.response?.data?.message);

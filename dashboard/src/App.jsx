@@ -20,12 +20,12 @@ const App = () => {
     try {
       const response = await axios.get("https://hospital-managment-backend-knzo.onrender.com/user/admin/me",{withCredentials:true, headers:{"Content-Type":"application/json"}});
       setisAuthenticated(true);
-      setuser(response.data.user);
-      // toast.success(response.data.message);
+      setuser(response?.data?.user);
+      // toast.success(response?.data?.message);
     } catch (error) {
       setisAuthenticated(false);
       setuser(error.response?.data?.user);
-      // toast.error(error.response.data.message);
+      // toast.error(error.response?.data?.message);
     }
     
   }

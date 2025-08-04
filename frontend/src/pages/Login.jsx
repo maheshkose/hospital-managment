@@ -36,10 +36,10 @@ const Login = () => {
   //   try {
   //     const result = await login();
   //     console.log("result", result);
-  //     toast.success(result.response.data.message)
+  //     toast.success(result.response?.data?.message)
   //   } catch (error) {
   //     console.log("error", error);
-  //     toast.error(error.response.data.message);
+  //     toast.error(error.response?.data?.message);
   //   }
   // };
 
@@ -51,11 +51,11 @@ const Login = () => {
         { email, password, role:"Patient" },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       )
-        toast.success(response.data.message);
+        toast.success(response?.data?.message);
         setisAuthenticated(true);
         navigate('/');
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message);
     }
   }
   return (

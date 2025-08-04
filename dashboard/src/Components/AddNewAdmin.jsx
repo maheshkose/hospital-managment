@@ -43,7 +43,7 @@ const AddNewAdmin = () => {
       const response = await axios.post("https://hospital-managment-backend-knzo.onrender.com/user/admin/addnew",formData,{withCredentials: true, headers: { "Content-Type": "application/json" }
 });
 
-      toast.success(response.data.message);
+      toast.success(response?.data?.message);
       setisAuthenticated(true);
       navigate('/');
     } catch (error) {
