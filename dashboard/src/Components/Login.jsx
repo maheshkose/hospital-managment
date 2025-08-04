@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${url}/user/admin/login`,
+        `${url}/user/login`,
         loginFormData,
         {
           withCredentials: true,
