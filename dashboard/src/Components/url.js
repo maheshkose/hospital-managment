@@ -1,0 +1,1 @@
+export const url ="https://hospital-managment-backend-knzo.onrender.com/api/v1";

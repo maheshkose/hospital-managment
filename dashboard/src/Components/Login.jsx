@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import AppContext from "../../Context/AppContext";
 import { Link, useNavigate } from "react-router-dom";
+import { url } from "./url.js"; // Import the URL from the url.js file
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/login",
+        `${url}/user/admin/login`,
         loginFormData,
         {
           withCredentials: true,

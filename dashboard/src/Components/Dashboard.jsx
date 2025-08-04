@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { GoCheckCircleFill } from "react-icons/go";
 import { AiFillCloseCircle } from "react-icons/ai";
 import AppContext from "../../Context/AppContext";
+import { url } from "./url.js"; // Import the URL from the url.js file
 
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
@@ -14,7 +15,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/appointment/getallappointment",
+          `${url}/appointment/getallappointment`,
           { withCredentials: true }
         );
         console.log(data);

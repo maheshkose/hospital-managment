@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-
+import { url } from "./url.js"; // Import the URL from the url.js file
 const Messageform = () => {
-  const url = "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1";
+  
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [email, setemail] = useState("");

@@ -10,6 +10,7 @@ import { IoPersonAddSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { url } from "./url.js"; // Import the URL from the url.js file
 
 const Sidebar = () => {
   const [show, setshow] = useState(false);
@@ -22,7 +23,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/admin/logout", {
+      .get(`${url}/user/admin/logout`, {
         withCredentials: true,
       })
       .then((res) => {

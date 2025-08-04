@@ -4,7 +4,7 @@ import { context } from "../main";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import { url } from "./url.js"; // Import the URL from the url.js file
 const Navbar = () => {
   const navigate = useNavigate();
   const [show, setshow] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       
-      const apiRes = await axios.get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/patient/logout",{withCredentials:true});
+      const apiRes = await axios.get(`${url}/user/patient/logout`,{withCredentials:true});
       console.log(apiRes);
       
       toast.success(apiRes.data.message);

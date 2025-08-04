@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { url } from "../Components/url.js"; // Import the URL from the url.js file
 
 const Register = () => {
   const { isAuthenticated, setisAuthenticated } = useContext(context);
@@ -49,7 +50,7 @@ const Register = () => {
     //optional//
     try {
       const response = await axios.post(
-        "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/patient/register",
+        `${url}/user/patient/register`,
         formData,
         {
           withCredentials: true,

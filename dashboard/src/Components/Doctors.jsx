@@ -4,6 +4,8 @@ import AppContext from '../../Context/AppContext'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { Navigate } from 'react-router-dom';
+import { url } from './url.js'; // Import the URL from the url.js file
+
 
 const Doctors = () => {
   const {isAuthenticated, doctors, setdoctors} = useContext(AppContext);
@@ -12,7 +14,7 @@ const Doctors = () => {
    
     const fetchDoctors = async (params) => {
       try {
-        const {data} = await axios.get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/doctors",{withCredentials:true});
+        const {data} = await axios.get(`${url}/user/doctors`,{withCredentials:true});
         console.log("data",data);
         
       setdoctors(data.doctors);

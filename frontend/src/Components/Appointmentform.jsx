@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
+ import { url } from "./url.js"; // Import the URL from the url.js file
 const Appointmentform = () => {
+ 
   const navigate = useNavigate();
   const departmentsArray = [
     {
@@ -82,7 +83,7 @@ const Appointmentform = () => {
     useEffect(() => {
     const fetchDoctors = async () => {
       const { data } = await axios.get(
-        "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/doctors",
+        `${url}/user/doctors`,
         {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },

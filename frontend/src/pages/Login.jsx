@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
-
+import { url } from "../Components/url.js"; // Import the URL from the url.js file
 const Login = () => {
   const { isAuthenticated, setisAuthenticated } = useContext(context);
 
@@ -21,7 +21,7 @@ const Login = () => {
   // const login = async () => {
   //   try {
   //     const apiRes = await axios.post(
-  //       "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/login",
+  //       "https://hospital-managment-backend-knzo.onrender.com/api/v1",
   //       { email, password, confirmPassword, role:"Patient" },
   //       { withCredentials: true, headers: { "Content-Type": "application/json" } }
   //     );
@@ -47,7 +47,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/login",
+        `${url}/user/patient/login`,
         { email, password, role:"Patient" },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       )

@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import AppContext from "../../Context/AppContext";
+import { url } from "./url.js"; // Import the URL from the url.js file
+
 const AddNewDoctor = () => {
   const navigate = useNavigate();
   const { isAuthenticated, setisAuthenticated } = useContext(AppContext);
@@ -99,7 +101,7 @@ const AddNewDoctor = () => {
 
     try {
       const response = await axios.post(
-        "response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/doctor/addnew",
+        `${url}/user/doctor/addnew`,
         payload,
         { withCredentials: true }
       );
