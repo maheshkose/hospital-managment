@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
    const fetchUser = async () => {
     try {
-      const response = await axios.get(`${url}user/patient/me`,{withCredentials:true});
+      const response = await axios.get(`${url}/user/patient/me`,{withCredentials:true});
       setisAuthenticated(true);
       setuser(response?.data?.user);
       
