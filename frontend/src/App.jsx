@@ -12,7 +12,7 @@ import Navbar from './Components/Navbar';
 import { context } from './main';
 import axios from 'axios';
 import Footer from './Components/Footer';
-
+import { url } from './Components/url';
 
 const App = () => {
 
@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
    const fetchUser = async () => {
     try {
-      const response = await axios.get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/patient/me",{withCredentials:true});
+      const response = await axios.get(`${url}user/patient/me`,{withCredentials:true});
       setisAuthenticated(true);
       setuser(response?.data?.user);
       
