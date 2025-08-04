@@ -12,7 +12,7 @@ import Navbar from './Components/Navbar';
 import { context } from './main';
 import axios from 'axios';
 import Footer from './Components/Footer';
-import { url } from './Components/url';
+import { url } from './Components/url.js';
 
 const App = () => {
 
