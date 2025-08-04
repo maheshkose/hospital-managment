@@ -21,7 +21,7 @@ const Login = () => {
   // const login = async () => {
   //   try {
   //     const apiRes = await axios.post(
-  //       "https://hospital-managment-backend-knzo.onrender.com/api/v1",
+  //       `${url}/user/patient/login`,
   //       { email, password, confirmPassword, role:"Patient" },
   //       { withCredentials: true, headers: { "Content-Type": "application/json" } }
   //     );
