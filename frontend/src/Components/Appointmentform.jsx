@@ -123,7 +123,7 @@ const Appointmentform = () => {
       const hasVisitedBool = Boolean(formData.hasVisited);
       setformData({ ...formData, hasVisited: hasVisitedBool });
 
-       const {data} = await axios.post("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/appointment/post",formData,{withCredentials:true,headers:{"Content-Type":"application/json"}});
+       const {data} = await axios.post(`${url}/appointment/post`,formData,{withCredentials:true,headers:{"Content-Type":"application/json"}});
 
        console.log(data);
        toast.success(data.message);

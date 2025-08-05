@@ -12,13 +12,14 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import Sidebar from './Components/Sidebar';
 import "./App.css"
+import { url } from './Components/url.js'; // Import the URL from the url.js file
 
 const App = () => {
  const {isAuthenticated, setisAuthenticated, user, setuser} = useContext(AppContext);
  useEffect(() => {
   const fetchUser = async () => {
     try {
-      const response = await axios.get("response?.data?https://hospital-managment-backend-knzo.onrender.com/api/v1/user/admin/me",{withCredentials:true, headers:{"Content-Type":"application/json"}});
+      const response = await axios.get(`${url}/user/admin/me`,{withCredentials:true, headers:{"Content-Type":"application/json"}});
       setisAuthenticated(true);
       setuser(response?.data?.user);
       // toast.success(response?.data?.message);
