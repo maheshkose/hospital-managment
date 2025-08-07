@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../../Context/AppContext";
-
+import { url } from "./url.js"; // Import the URL from the url.js file
 const Messages = () => {
   const navigate = useNavigate();
   const [messages, setmessages] = useState([]);
