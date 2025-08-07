@@ -21,7 +21,9 @@ app.use(
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
+  // [process.env.FRONTEND_URI, process.env.DASHBOARD_URI]
 );
+app.options('*', cors());
 
 app.use(cookieParser());
 app.use(express.json());
