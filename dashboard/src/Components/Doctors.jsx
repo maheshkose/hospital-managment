@@ -46,7 +46,8 @@ const Doctors = () => {
                 <p> phone: <span>{doctor.phone}</span></p>
                 <p> nic: <span>{doctor.nic}</span></p>
                 <p> gender: <span>{doctor.gender}</span></p>
-                <p>Department: <span>{doctor.deparment}</span></p>
+                <p>Department: <span>{doctor.doctorDeparment
+}</span></p>
                 
               </div>
             </div>
