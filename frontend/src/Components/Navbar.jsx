@@ -41,8 +41,8 @@ const Navbar = () => {
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
             {/* <Link to={"/"}>Home</Link> */}
-            <Link to={"/appointment"}>Appointment</Link>
-            <Link to={"/about"}>About Us</Link>
+            <Link to={"/appointment"} onClick={()=>setshow(!show)}>Appointment</Link>
+            <Link to={"/about"} onClick={()=>setshow(!show)} >About Us</Link>
           </div>
           {isAuthenticated ? (
             <button className="logoutBtn btn" onClick={handleLogout}>
