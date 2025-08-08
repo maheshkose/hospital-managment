@@ -13,7 +13,7 @@ import { toast } from "react-toastify";
 import { url } from "./url.js"; // Import the URL from the url.js file
 
 const Sidebar = () => {
-  const [show, setshow] = useState(false);
+  const [show, setshow] = useState(true);
   const { isAuthenticated, setisAuthenticated } = useContext(AppContext);
   const navigate = useNavigate();
   const goto = (path) => {
@@ -37,12 +37,21 @@ const Sidebar = () => {
       });
   };
   return (
+    
     <>
+
+  
       <nav
         style={!isAuthenticated ? { display: "none" } : { display: "flex" }}
         className={show ? "show sidebar" : "sidebar"}
       >
-        <div className="links">
+        <div className="hamburger-container">
+           <GiHamburgerMenu
+            className="hamburger"
+            onClick={() => setshow(!show)}/>
+        </div>
+        <div className={show ? "show links" : "links"} >
+         
           <TiHome onClick={() => goto("/")} />
           <FaUserDoctor onClick={() => goto("/doctors")} />
           <MdAddModerator onClick={() => goto("/admin/addnew")} />
