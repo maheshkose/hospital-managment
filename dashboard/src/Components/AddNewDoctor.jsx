@@ -80,6 +80,8 @@ const AddNewDoctor = () => {
     const { name, value } = e.target;
     if (name === "docAvatar") {
       const file = e.target.files[0];
+
+      
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = () => {

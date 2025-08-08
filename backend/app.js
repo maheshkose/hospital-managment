@@ -15,15 +15,17 @@ const app = express();
 config({ path: "./config/config.env" });
 
 //cors config
+
 app.use(
   cors({
     origin: [process.env.FRONTEND_URI, process.env.DASHBOARD_URI],
-    method: ["GET", "POST", "DELETE", "PUT"],
+    method: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
     credentials: true,
   })
   // [process.env.FRONTEND_URI, process.env.DASHBOARD_URI]
 );
-app.options('*', cors());
+// app.options('/*', cors());
+
 
 app.use(cookieParser());
 app.use(express.json());
@@ -38,6 +40,7 @@ app.use(
 
 //database connection
 db();
+
 
 //routers
 app.use('/api/v1/message', messageRouter);
