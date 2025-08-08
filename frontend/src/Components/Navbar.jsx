@@ -34,22 +34,22 @@ const Navbar = () => {
     <>
       <nav className="container">
         <div className="logo">
-          <Link to={"/"}>
+          <Link to={"/"} onClick={()=>setshow(!show)}>
             <img src="/image/logo.png" alt="logo.png" className="logo-img"/>
           </Link>
           </div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
             {/* <Link to={"/"}>Home</Link> */}
-            <Link to={"/appointment"}>Appointment</Link>
-            <Link to={"/about"}>About Us</Link>
+            <Link to={"/appointment"} onClick={()=>setshow(!show)}>Appointment</Link>
+            <Link to={"/about"} onClick={()=>setshow(!show)} >About Us</Link>
           </div>
           {isAuthenticated ? (
-            <button className="logoutBtn btn" onClick={handleLogout}>
+            <button className="logoutBtn btn" onClick={()=>{handleLogout(); setshow(!show)}}>
               Logout
             </button>
           ) : (
-            <button className="logoutBtn btn" onClick={gotoLogin}>
+            <button className="logoutBtn btn" onClick={()=>{gotoLogin(); setshow(!show)}}>
               Login
             </button>
           )}
